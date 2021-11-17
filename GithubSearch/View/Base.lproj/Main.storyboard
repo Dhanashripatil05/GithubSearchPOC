@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GithubSearch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please enter text to search repo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jC3-0W-aSL">
+                                <rect key="frame" x="20" y="94" width="374" height="50"/>
+                                <accessibility key="accessibilityConfiguration" identifier="searchTextField"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="88G-vX-jVl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SJc-wR-F3i">
+                                <rect key="frame" x="10" y="154" width="394" height="698"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Github Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l4c-iY-dmk">
+                                <rect key="frame" x="140" y="44" width="134" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jC3-0W-aSL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="336-SW-RxK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SJc-wR-F3i" secondAttribute="bottom" constant="10" id="56f-na-YM8"/>
+                            <constraint firstItem="l4c-iY-dmk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BIL-zt-H2X"/>
+                            <constraint firstItem="SJc-wR-F3i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="BaU-ln-xwS"/>
+                            <constraint firstItem="jC3-0W-aSL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="CJT-oO-ubY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jC3-0W-aSL" secondAttribute="trailing" constant="20" id="aT9-AG-aqO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SJc-wR-F3i" secondAttribute="trailing" constant="10" id="qBw-m8-y6S"/>
+                            <constraint firstItem="jC3-0W-aSL" firstAttribute="top" secondItem="l4c-iY-dmk" secondAttribute="bottom" constant="10" id="v7P-oP-ExU"/>
+                            <constraint firstItem="SJc-wR-F3i" firstAttribute="top" secondItem="jC3-0W-aSL" secondAttribute="bottom" constant="10" id="ynZ-Ah-BQN"/>
+                            <constraint firstItem="l4c-iY-dmk" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zIp-Y5-yAX"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="SJc-wR-F3i" id="Tpb-q4-2cO"/>
+                        <outlet property="textfield" destination="jC3-0W-aSL" id="CjS-12-Ghp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-912" y="-190"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
